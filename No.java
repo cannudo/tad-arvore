@@ -19,4 +19,8 @@ public class No<TipoGenerico> {
             return this.noPai;
         }
     }
+
+    public boolean ehExterno() {
+        return this.filhoEsquerdo == null && this.filhoDireito == null;
+    }
 }
