@@ -11,4 +11,12 @@ public class No<TipoGenerico> {
     public boolean ehNoRaiz() {
         return this.noPai == null;
     }
+
+    public TipoGenerico pai() {
+        if (this.ehNoRaiz()) {
+            return null; /* TODO ehNoRaizException */
+        } else {
+            return this.noPai;
+        }
+    }
 }
