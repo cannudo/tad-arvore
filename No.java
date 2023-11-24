@@ -7,4 +7,8 @@ public class No<TipoGenerico> {
     public No(TipoGenerico elemento) {
         this.elemento = elemento;
     }
+
+    public boolean ehNoRaiz() {
+        return this.noPai == null;
+    }
 }
