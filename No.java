@@ -23,4 +23,8 @@ public class No<TipoGenerico> {
     public boolean ehExterno() {
         return this.filhoEsquerdo == null && this.filhoDireito == null;
     }
+
+    public boolean ehInterno() {
+        return this.filhoEsquerdo != null || this.filhoDireito != null;
+    }
 }
