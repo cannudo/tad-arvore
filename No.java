@@ -4,27 +4,22 @@ public class No<TipoGenerico> {
     private No<TipoGenerico> filhoEsquerdo;
     private No<TipoGenerico> filhoDireito;
 
-    public No(TipoGenerico elemento) {
-        this.elemento = elemento;
+    public No() {
+        this.elemento = null;
+        this.noPai = null;
+        this.filhoEsquerdo = null;
+        this.filhoDireito = null;
     }
 
-    public boolean ehNoRaiz() {
-        return this.noPai == null;
+    public void status() {
+        System.out.println("Elemento: " + this.elemento);
+        System.out.println("Nó pai: " + this.noPai);
+        System.out.println("Filho esquerdo: " + this.filhoEsquerdo);
+        System.out.println("Filho direito: " + this.filhoDireito);
     }
 
-    public TipoGenerico pai() {
-        if (this.ehNoRaiz()) {
-            return null; /* TODO ehNoRaizException */
-        } else {
-            return this.noPai;
-        }
-    }
-
-    public boolean ehExterno() {
-        return this.filhoEsquerdo == null && this.filhoDireito == null;
-    }
-
-    public boolean ehInterno() {
-        return this.filhoEsquerdo != null || this.filhoDireito != null;
+    public static void main(String[] args) {
+        No<String> testeDeConstrucao = new No<>();
+        testeDeConstrucao.status();
     }
 }
