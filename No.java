@@ -15,6 +15,10 @@ public class No<TipoGenerico> {
         return this.noPai;
     }
 
+    public void setNoPai(No<TipoGenerico> no) {
+        this.noPai = no;
+    }
+
     public No<TipoGenerico> getFilhoEsquerdo() {
         return this.filhoEsquerdo;
     }
