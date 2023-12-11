@@ -11,11 +11,17 @@ public class No<TipoGenerico> {
         this.filhoDireito = null;
     }
 
+    public No getNoPai() {
+        return this.noPai;
+    }
+
     public void status() {
+        System.out.println("[status do objeto " + this + "]");
         System.out.println("Elemento: " + this.elemento);
         System.out.println("Nó pai: " + this.noPai);
         System.out.println("Filho esquerdo: " + this.filhoEsquerdo);
         System.out.println("Filho direito: " + this.filhoDireito);
+        System.out.println("[fim do status do objeto " + this + "]");
     }
 
     public static void main(String[] args) {
