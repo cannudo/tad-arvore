@@ -33,7 +33,7 @@ class ArvoreBinariaDePesquisa {
         System.out.println();
         System.out.println();
 
-        System.out.println("Primeiro nó criado é interno? " + arvore.isInternal(primeiroNo)); // ❌ dando false e era pra dar true TODO: adicionar o filho na classe No
+        System.out.println("Primeiro nó criado é interno? " + arvore.isInternal(primeiroNo)); // ✅ dando true NA BASE DA GAMBIARRA
         System.out.println("Primeiro nó criado é externo? " + arvore.isExternal(primeiroNo));
         System.out.println("Segundo nó criado realmente tem o primeiro como pai? " + (segundoNo.getNoPai() == primeiroNo));
         System.out.println("Segundo nó criado é interno? " + arvore.isInternal(segundoNo));

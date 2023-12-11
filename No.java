@@ -17,6 +17,7 @@ public class No<TipoGenerico> {
 
     public void setNoPai(No<TipoGenerico> no) {
         this.noPai = no;
+        this.noPai.setGambiarraAlgumFilho(this);
     }
 
     public No<TipoGenerico> getFilhoEsquerdo() {
@@ -25,6 +26,23 @@ public class No<TipoGenerico> {
 
     public No getFilhoDireito() {
         return this.filhoDireito;
+    }
+
+    public void setFilhoEsquerdo(No<TipoGenerico> no) {
+        this.filhoEsquerdo = no;
+    }
+
+    public void setFilhoDireito(No<TipoGenerico> no) {
+        this.filhoDireito = no;
+    }
+
+    public void setGambiarraAlgumFilho(No<TipoGenerico> no) {
+        // 🚨🚨🚨 gambiarra! Volte depois e arrume essa merda! 🚨🚨🚨
+        if(this.filhoEsquerdo == null) {
+            this.filhoEsquerdo = no;
+        } else {
+            this.filhoDireito = no;
+        }
     }
 
     public void status() {
