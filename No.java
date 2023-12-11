@@ -11,8 +11,16 @@ public class No<TipoGenerico> {
         this.filhoDireito = null;
     }
 
-    public No getNoPai() {
+    public No<TipoGenerico> getNoPai() {
         return this.noPai;
+    }
+
+    public No<TipoGenerico> getFilhoEsquerdo() {
+        return this.filhoEsquerdo;
+    }
+
+    public No getFilhoDireito() {
+        return this.filhoDireito;
     }
 
     public void status() {
