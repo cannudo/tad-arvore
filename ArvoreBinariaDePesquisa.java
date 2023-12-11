@@ -6,4 +6,8 @@ class ArvoreBinariaDePesquisa {
     public boolean isExternal(No no) {
         return (no.getFilhoEsquerdo == null) && (no.getFilhoDireito == null);
     }
+
+    public No parent(No no) {
+        return no.getNoPai(); 
+    }
 }
