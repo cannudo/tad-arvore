@@ -1,5 +1,6 @@
 public class No<TipoGenerico> {
-    private TipoGenerico elemento;
+    // MÉTODO busca
+    private TipoGenerico elemento; // chave
     private No<TipoGenerico> noPai;
     private No<TipoGenerico> filhoEsquerdo;
     private No<TipoGenerico> filhoDireito;
@@ -43,6 +44,10 @@ public class No<TipoGenerico> {
         } else {
             this.filhoDireito = no;
         }
+        // comparar as CHAVES (elementos) do nó pai e do novo nó (nó filho)
+        // caso a chave do novo no < que a chave do nó pai, coloque na esquerda
+        // caso seja >, direita
+        // ELSE NoJaInseridoException
     }
 
     public void status() {

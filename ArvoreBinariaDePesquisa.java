@@ -1,4 +1,6 @@
 class ArvoreBinariaDePesquisa {
+    // atributo referência para o nó raiz
+
     public boolean isRoot(No no) {
         return no.getNoPai() == null;
     }
@@ -13,6 +15,16 @@ class ArvoreBinariaDePesquisa {
 
     public No parent(No no) {
         return no.getNoPai(); 
+    }
+
+    public void buscaInOrder(No noAtual) {
+        if(this.isInternal(noAtual)) {
+            buscaInOrder(noAtual.getFilhoEsquerdo());
+        }
+        // visite(noAtual): visita e faz algo de acordo com a sua necessidade
+        if(this.isExternal(noAtual)) {
+            buscaInOrder(noAtual.getFilhoDireito());
+        }
     }
 
     public ArvoreBinariaDePesquisa() {}
